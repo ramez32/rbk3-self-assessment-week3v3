@@ -1,6 +1,6 @@
 class FishTable extends React.component{
-    constructor(props)
-    super(props)
+    constructor({fishes})
+    super({fishes})
     render{
         return(
   <table>
