@@ -1,19 +1,15 @@
-class FishTable extends React.component{
-    constructor({fishes})
-    super({fishes})
-    render{
-        return(
+var FishTable = ({fishes}) => (
   <table>
     <tbody>
-      <FishTableRow  />
-      <FishTableRow  />
-      <FishTableRow  />
+        {fishes.map(fish =>
+        	return <FishTableRow fish={fish}/>
+
+      )}
     </tbody>
   </table>
-            );
-       }
-}
-// PropTypes tell other developers what `props` a component expects .
+);
+
+// PropTypes    tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 FishTable.propTypes = {
   fishes: React.PropTypes.array.isRequired

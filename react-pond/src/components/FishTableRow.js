@@ -6,19 +6,18 @@ class FishTableRow extends React.Component {
     };
   }
 
-
-  // Currently, the image being displayed is hardcoded from tinyurl.com 
+  // Currently     , the image being displayed is hardcoded from tinyurl.com 
   render() {
     return (
       <tr onClick={() => this.setState({showDescription: !this.state.showDescription})}>
-        <td className="fish-name">Nemo</td>
+        <td className="fish-name">{props.fish.name}</td>
         <td>
-          <img src="http://tinyurl.com/h8o5szh"/>
+          <img src={props.fish.image} />
         </td>
         {this.state.showDescription ? <td className="fish-description">Does anyone know where my dad is?</td> : null}
       </tr>
     )
-  }  
+  }
 }
 
 // PropTypes tell other developers what `props` a component expects
